@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, Input } from '@angular/core';
+import { SafeStyle, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'sb-layout-blog',
@@ -6,7 +7,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     templateUrl: './layout-blog.component.html',
     styleUrls: ['layout-blog.component.scss'],
 })
+
 export class LayoutBlogComponent implements OnInit {
-    constructor() {}
-    ngOnInit() {}
+    @Input() backgroundImage!: string;
+    safeBackgroudImage!: SafeStyle;
+    constructor(private domSanitizer: DomSanitizer) {}
+    ngOnInit() {
+        this.safeBackgroudImage = this.domSanitizer.bypassSecurityTrustStyle(this.backgroundImage);
+    }
 }

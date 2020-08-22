@@ -1,17 +1,9 @@
-<sb-layout-blog
-    ><sb-clean-blog-header backgroundImage='url("https://firebasestorage.googleapis.com/v0/b/kevinbroadbridge-b609b.appspot.com/o/IMG_20180822_191403-1%20(3).jpg?alt=media&token=e9c1c3f7-6943-4b0f-b78b-fe9697d925ad")' heading="Kevin 2" subHeading="Blog Theme by Start Bootstrap" [siteHeading]="true"></sb-clean-blog-header><ng-container *ngIf="posts$ | async as posts"
-        ><div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="post-preview" *ngFor="let post of posts">
-                        <a [routerLink]="post.slug"
-                            ><h2 class="post-title">{{post.heading}}</h2>
-                            <h3 class="post-subtitle">{{post.subHeading}}</h3></a
-                        >
-                        <p class="post-meta">{{post.meta}}</p>
-                    </div>
-                </div>
+<sb-layout-blog backgroundImage='url("https://firebasestorage.googleapis.com/v0/b/kevinbroadbridge-b609b.appspot.com/o/IMG_20180822_191403-1%20(3).jpg?alt=media&token=e9c1c3f7-6943-4b0f-b78b-fe9697d925ad")'
+    ><sb-clean-blog-header  heading="Kevin 2" subHeading="Blog Theme by Start Bootstrap" [siteHeading]="true"></sb-clean-blog-header><div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
             </div>
-        </div></ng-container
-    ></sb-layout-blog
->
+        </div>
+    </div>
+</sb-layout-blog>
