@@ -9,11 +9,13 @@
 }
 
 .full-background {
-    background-color: $gray-800;
+    background-color: red($color: #000000);
     width: 100vw;
     min-height: 100vh;
-    padding-bottom: 10rem;
+    //padding-bottom: 10rem;
 }
+
+
 
 #mainNav .btn {
     font-size: 0.75rem;

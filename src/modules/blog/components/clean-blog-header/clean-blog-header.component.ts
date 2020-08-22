@@ -10,7 +10,7 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 export class CleanBlogHeaderComponent implements OnInit {
     @Input() backgroundImage!: string;
     @Input() heading!: string;
-    @Input() subHeading!: string;
+    subHeading: string = "llit anim id est laborum.";
     @Input() meta!: string;
     @Input() siteHeading = false;
 
