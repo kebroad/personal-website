@@ -22,6 +22,7 @@ import * as blogGuards from './guards';
 
 /* Services */
 import * as blogServices from './services';
+import { WorkExperienceComponent } from './containers/work-experience/work-experience.component';
 
 @NgModule({
     imports: [
@@ -35,7 +36,7 @@ import * as blogServices from './services';
         NavigationModule,
     ],
     providers: [...blogServices.services, ...blogGuards.guards],
-    declarations: [...blogContainers.containers, ...blogComponents.components],
+    declarations: [...blogContainers.containers, ...blogComponents.components, WorkExperienceComponent],
     exports: [...blogContainers.containers, ...blogComponents.components],
 })
 export class BlogModule {}

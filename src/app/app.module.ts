@@ -7,6 +7,7 @@ import { NavigationModule } from '@modules/navigation/navigation.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
     declarations: [AppComponent],
     imports: [
