@@ -18,6 +18,22 @@ export const ROUTES: Routes = [
         component: blogContainers.HomeComponent,
     },
     {
+        path: 'experience',
+        component: blogContainers.WorkExperienceComponent,
+    },
+    {
+        path: 'skills',
+        component: blogContainers.SkillsComponent,
+    },
+    {
+        path: 'projects',
+        component: blogContainers.ProjectsComponent,
+    },
+    {
+        path: 'contact',
+        component: blogContainers.ContactComponent,
+    },
+    {
         path: 'about',
         component: blogContainers.AboutComponent,
     },

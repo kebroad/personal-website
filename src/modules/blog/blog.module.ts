@@ -23,6 +23,9 @@ import * as blogGuards from './guards';
 /* Services */
 import * as blogServices from './services';
 import { WorkExperienceComponent } from './containers/work-experience/work-experience.component';
+import { SkillsComponent } from './containers/skills/skills.component';
+import { ProjectsComponent } from './containers/projects/projects.component';
+import { ContactComponent } from './containers/contact/contact.component';
 
 @NgModule({
     imports: [
@@ -36,7 +39,7 @@ import { WorkExperienceComponent } from './containers/work-experience/work-exper
         NavigationModule,
     ],
     providers: [...blogServices.services, ...blogGuards.guards],
-    declarations: [...blogContainers.containers, ...blogComponents.components, WorkExperienceComponent],
+    declarations: [...blogContainers.containers, ...blogComponents.components, WorkExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent],
     exports: [...blogContainers.containers, ...blogComponents.components],
 })
 export class BlogModule {}
