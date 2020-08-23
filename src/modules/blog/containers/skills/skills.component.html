@@ -1,0 +1,35 @@
+<sb-layout-blog>
+
+
+    <div class="container" >
+        <div class="text-center">
+            <h3 class=" text-uppercase">Certifications</h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-sm-3 col-md-2">
+                <img class="img-fluid " src="assets/img/azure-fundamentals.png" alt="">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <img class="img-fluid " src="assets/img/azure-administrator-associate.png" alt="">
+            </div>
+            <div class="col-4 col-sm-3 col-md-2">
+                <img class="img-fluid " src="assets/img/azure-solutions-architect-expert.png" alt="">
+            </div>
+        </div>
+        <div class="text-center">
+            <h3 class="text-uppercase">Skills</h3>
+        </div>
+        <div class="row justify-content-center">
+                <div class="col" *ngFor="let skillSet of skillSets">
+                    <div class="card">
+                        <div class="card-body align-self-center">
+                            <h6 class="card-title text-center">{{skillSet.skillSetName}}</h6>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                <li *ngFor="let skillName of skillSet.skillList" class="list-group-item text-center">{{skillName}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</sb-layout-blog>
