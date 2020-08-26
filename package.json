@@ -36,7 +36,7 @@
     "homepage": "https://github.com/StartBootstrap/sb-clean-blog-angular#readme",
     "private": true,
     "dependencies": {
-        "@angular/animations": "9.0.4",
+        "@angular/animations": "^9.0.4",
         "@angular/common": "9.0.4",
         "@angular/compiler": "9.0.4",
         "@angular/core": "9.0.4",

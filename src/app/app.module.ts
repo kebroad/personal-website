@@ -1,6 +1,7 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppCommonModule } from '@common/app-common.module';
 import { NavigationModule } from '@modules/navigation/navigation.module';
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
         HttpClientModule,
         AppCommonModule.forRoot(),
         NavigationModule.forRoot(),
+        BrowserAnimationsModule
     ],
     bootstrap: [AppComponent],
 })

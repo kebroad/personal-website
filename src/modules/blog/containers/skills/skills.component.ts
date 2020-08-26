@@ -1,10 +1,50 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillSet } from '@modules/blog/models/skillset.model';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'sb-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
+  animations: [
+    trigger('moveUp', [
+        state('in', style({
+          opacity: 1,
+          transform: 'translateY(0)'
+        })),
+        transition('void => *', [
+          style({
+            opacity: 0,
+            transform: 'translateY(100px)'
+          }),
+          animate(300)
+        ]),
+        transition('* => void', [
+          animate(300, style({
+            transform: 'translateX(100px)',
+            opacity: 0
+          }))
+        ])
+      ]),
+      trigger('moveIn', [
+        state('in', style({
+          opacity: 1,
+          transform: 'translateY(0)'
+        })),
+        transition('void => *', [
+          style({
+            opacity: 0,
+          }),
+          animate(300)
+        ]),
+        transition('* => void', [
+          animate(300, style({
+            opacity: 1
+          }))
+        ])
+      ]),
+
+]
 })
 export class SkillsComponent implements OnInit {
   
@@ -12,11 +52,11 @@ export class SkillsComponent implements OnInit {
   skillSets : SkillSet[] = [
     {
       skillSetName: "IT",
-      skillList: ["Microsoft Azure", "Azure DevOps", "Jenkins", "Kubernetes", "Openshift", "Docker"]
+      skillList: ["Microsoft Azure", "Azure DevOps", "Jenkins", "Kubernetes", "Openshift", "Docker", "Vagrant","Windows", "Linux", "APIs", "Serverless"]
     },
     {
       skillSetName: "Languages",
-      skillList: ["C++", "JavaScript", "Python", "TypeScript", "C", "Powershell", "Bash", "Ruby" ]
+      skillList: ["C++", "JavaScript", "Python", "TypeScript", "C", "Powershell", "Dart", "Bash", "Assembly", "Ruby", "Latex" ]
     },
     {
       skillSetName: "Microcontroller Experience",
@@ -24,7 +64,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       skillSetName: "Libraries & Frameworks",
-      skillList: ["Angular", "CSS", "OpenGL"]
+      skillList: ["Angular", "CSS", "OpenGL", "Flutter"]
     },
     {
       skillSetName: "Instrumentation",
