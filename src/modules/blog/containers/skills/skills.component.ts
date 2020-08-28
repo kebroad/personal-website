@@ -68,7 +68,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       skillSetName: "Instrumentation",
-      skillList:  ["PCB Mill", "Oscilloscope", "Soldering", "Reflowing", "Photolithography", "3D Printing"]
+      skillList:  ["PCB Mill", "Oscilloscope", "Soldering", "Reflowing", "3D Printing"]
     }
 
 
