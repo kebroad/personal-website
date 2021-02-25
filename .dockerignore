@@ -1,8 +1,8 @@
-*
-!.dockerignore
-!Dockerfile
-!dist/**
-!dist-debug/**
-!scripts/**
-!nginx.conf
-!version
+# *
+# !.dockerignore
+# !Dockerfile
+# !dist/**
+# !dist-debug/**
+# !scripts/**
+# !nginx.conf
+# !version
