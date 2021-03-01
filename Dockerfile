@@ -11,7 +11,7 @@ RUN ng build --prod
 
 
 # Stage 2
-FROM nginx:1.16.1
+FROM nginx:latest
 
 EXPOSE 80
 
