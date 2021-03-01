@@ -19,8 +19,8 @@ RUN echo "deb http://security.debian.org/debian-security stretch/updates main" >
 RUN apt-get -y update -o Dir::Etc::SourceList=/etc/apt/sources.security.only.list -o Dir::Etc::Parts=/dev/null
 RUN apt-get -y upgrade -o Dir::Etc::SourceList=/etc/apt/sources.security.only.list -o Dir::Etc::Parts=/dev/nulld
 
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/nginx.conf
+# RUN rm /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
 COPY scripts/docker/start-nginx.sh /usr/share/nginx/start-nginx.sh
 
 COPY --from=node /app/dist/sb-clean-blog-angular /usr/share/nginx/html
