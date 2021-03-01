@@ -30,6 +30,7 @@ docker-build:
   before_script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
   script:
+    - ls dist
     - docker build --pull -t "$CI_REGISTRY_IMAGE":"$VERSION" .
     - docker push "$CI_REGISTRY_IMAGE":"$VERSION"
   dependencies:
