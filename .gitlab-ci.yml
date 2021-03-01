@@ -1,11 +1,25 @@
 # This file is a template, and might need editing before it works on your project.
 stages:
   - build
+  - deploy
 
 variables:
   VERSION: "1.4" 
 
-  
+npm-build:
+  image: node:latest
+  before_script:
+    - npm install
+    - npm install -g @angular/cli
+    - npm i -g firebase-tools
+  stage: build
+  script:
+    - ng build --prod
+    - firebase deploy --token $FIREBASE_TOKEN
+  artifacts:
+    expire_in: 1 hrs
+    paths:
+      - dist/
 
 docker-build:
   # Official docker image.
@@ -18,19 +32,6 @@ docker-build:
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE":"$VERSION" .
     - docker push "$CI_REGISTRY_IMAGE":"$VERSION"
- # only:
- #   - master
+  dependencies:
+    - npm-build
 
-#docker-build:
-  # Official docker image.
-  #image: docker:latest
-  #stage: build
-  #services:
-   # - docker:dind
- # before_script:
-   # - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
- # script:
- #   - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
-  #  - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
- # except:
-  #  - master
