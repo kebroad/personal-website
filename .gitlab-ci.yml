@@ -4,7 +4,7 @@ stages:
   - deploy
 
 variables:
-  VERSION: "1.4" 
+  VERSION: "1.5" 
 
 npm-build:
   image: node:latest
