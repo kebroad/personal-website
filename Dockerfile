@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #Uncomment for build using docker. Instead I am building in gitlab build agent.
 # #Stage 1 
