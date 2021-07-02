@@ -35,7 +35,7 @@ jobs:
       - run: sudo npm i -g firebase-tools
       - name: Checkout repository
         uses: actions/checkout@v2
-      - run: ls
+      - run: ng build --prod
 
       # # Login against a Docker registry except on PR
       # # https://github.com/docker/login-action
