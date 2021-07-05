@@ -43,6 +43,7 @@ jobs:
           name: website-build
           path: ${{ github.workspace }}
   build_deploy_docker_image:
+    needs: build_website
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -90,6 +91,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
   deploy_firebase:
+    needs: build_website
     runs-on: ubuntu-latest
     permissions:
       contents: read
