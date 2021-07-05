@@ -49,6 +49,7 @@ jobs:
             firebase.json
             nginx.conf
             version
+            scripts
   build_deploy_docker_image:
     needs: build_website
     runs-on: ubuntu-latest
