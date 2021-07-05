@@ -41,7 +41,13 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: website-build
-          path: ${{ github.workspace }}
+          path: |
+            dist
+            .firebase
+            .firebaserc
+            Dockerfile
+            firebase.json
+            nginx.conf
   build_deploy_docker_image:
     needs: build_website
     runs-on: ubuntu-latest
